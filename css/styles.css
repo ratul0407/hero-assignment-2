@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* removing websites defauls styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+/* custom fonts */
+@font-face {
+  font-family: "Miama Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Miama Regular"), url("../fonts/Miama-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Miama";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Miama"), url("../fonts/Miama.woff") format("woff");
+}
+/* shared styles */
+:root {
+  --color-primary: rgb(230, 83, 60);
+  --color-secondary: rgb(255, 255, 255);
+  --color-paragraph: rgba(255, 255, 255, 0.5);
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  background-color: var(--color-primary);
+  font-size: 1.125rem;
+  color: var(--color-secondary);
+  border-radius: 2625rem;
+  cursor: pointer;
+}
+.btn-transparent {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+}
+.color-white {
+  color: var(--color-secondary);
+}
+
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+.max-width {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.paragraph {
+  color: var(--color-paragraph);
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+.section-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.secondary-title {
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+.trainer-name {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.trainer {
+  color: rgba(255, 255, 255, 0.4);
+}
+body {
+  background-color: rgb(17, 17, 17);
+}
+/* header */
+header {
+  /* background: linear-gradient(
+    rgb(17, 17, 17),
+    rgb(119, 119, 119) 180%,
+    rgb(17, 17, 17)
+  ); */
+  background: linear-gradient(to bottom, #000, #434343, #000);
+}
+
+/* navbar styles */
+.navbar {
+  padding-top: 3.6rem;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-title {
+  color: var(--color-primary);
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+.navbar-list {
+  display: flex;
+  gap: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+.hamburger-icon-container {
+  display: none;
+}
+.list-item {
+  list-style-type: none;
+}
+.list-item a {
+  text-decoration: none;
+  color: white;
+}
+.primary-list {
+  padding: 0.5rem 1.25rem;
+  border-radius: 3rem;
+  background-color: var(--color-primary);
+}
+
+/* banner styles */
+.banner {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.banner-title {
+  font-size: 4.875rem;
+  max-width: 10ch;
+  line-height: 6rem;
+}
+.banner-title span {
+  font-family: "Miama Regular";
+  font-weight: normal;
+}
+.banner-description {
+  max-width: 52ch;
+}
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+.img-container {
+  position: relative;
+}
+
+.widget {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.widget.position-1 {
+  top: 125px;
+  right: -74px;
+}
+.widget.position-1 > h4 {
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+}
+.widget.position-1 > p {
+  font-size: 0.8125rem;
+}
+.widget.position-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+.widget.position-2 h4 {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255);
+}
+.widget.position-2 span {
+  display: inline-block;
+  border: 1px solid red;
+  height: 40px;
+  width: 40px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+.position-2 {
+  bottom: 63px;
+  left: -113px;
+}
+
+/* main */
+main {
+  color: white;
+  padding-top: 6rem;
+}
+.habits-text-container {
+  text-align: center;
+}
+.habits-title {
+  padding-bottom: 1rem;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 4rem;
+}
+.flex-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.flex-group > img {
+  border-radius: 50%;
+}
+.message {
+  text-align: center;
+}
+.message > .paragraph {
+  max-width: 25ch;
+}
+
+/* extra mile section */
+.extra-mile {
+  margin-top: 4rem;
+  border-radius: 1.2rem;
+  background: rgb(34, 34, 34);
+  padding: 2.5rem;
+  margin-bottom: 6rem;
+}
+.extra-mile-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.extra-mile-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.extra-mile .paragraph {
+  max-width: 50ch;
+}
+.extra-mile button {
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.running-img {
+  border-radius: 1.2rem;
+  width: 366px;
+  height: 312px;
+  object-fit: none;
+
+  object-position: 65% 30%;
+}
+
+.bg {
+  background-color: rgb(37, 37, 37);
+}
+.bmi-text-container {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+.bmi-flex-group {
+  display: flex;
+  margin-top: 5.5rem;
+
+  padding: 3.2rem 0;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.bmi-chart .secondary-title {
+  margin-bottom: 3.25rem;
+}
+.bmi-calculator .paragraph {
+  max-width: 65ch;
+}
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+th {
+  font-weight: 500;
+}
+td {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.bmi-calculator-text {
+  margin-bottom: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form div {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+input,
+select {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+}
+form button {
+  margin-top: 1rem;
+  width: 15rem;
+}
+
+.meet-text-container {
+  text-align: center;
+  margin: 7rem 0 4rem 0;
+}
+.meet-text-container .paragraph {
+  max-width: 75ch;
+  margin: 0 auto;
+}
+.grid-container img {
+  border-radius: 1rem;
+  width: 20.2rem;
+  height: 17rem;
+  object-fit: cover;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 20.7rem);
+  grid-template-rows: repeat(2, 17rem);
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.grid-img-container {
+  position: relative;
+}
+.grid-img-container div {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+/* solved overflow issue for the widget */
+@media screen and (max-width: 1600px) {
+  .widget.position-1 {
+    right: -7px;
+  }
+}
+/* media queries for smaller screen sizes */
+@media screen and (max-width: 576px) {
+  .btn {
+    padding: 1rem 1.8rem;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar-list {
+    display: none;
+  }
+  .hamburger-icon-container {
+    display: block;
+  }
+  .banner {
+    flex-direction: column;
+  }
+  .banner-title {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    max-width: auto;
+  }
+  .btn-container {
+    justify-content: space-between;
+  }
+  .widget.position-1 {
+    right: -10px;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .extra-mile-container {
+    flex-direction: column;
+  }
+  .extra-mile button {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .bmi-flex-group {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
