@@ -35,6 +35,7 @@ a {
   --color-primary: rgb(230, 83, 60);
   --color-secondary: rgb(255, 255, 255);
   --color-paragraph: rgba(255, 255, 255, 0.5);
+  --color-gray: rgba(255, 255, 255, 0.1);
 }
 
 .btn {
@@ -90,7 +91,12 @@ body {
 }
 /* header */
 header {
-  background: linear-gradient(to bottom, #000, #434343, #000);
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0),
+    rgb(33, 33, 33),
+    rgb(0, 0, 0)
+  );
 }
 
 /* navbar styles */
@@ -110,7 +116,7 @@ header {
 .navbar-list {
   display: flex;
   gap: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-gray);
   padding: 0.7rem 1rem 0.7rem 0.3rem;
   border-radius: 3rem;
 }
@@ -163,12 +169,12 @@ header {
 
 .widget {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-gray);
   padding: 1rem 2rem;
   border-radius: 0.8rem;
   color: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-gray);
 }
 .widget.position-1 {
   top: 125px;
@@ -304,7 +310,7 @@ table {
 }
 td,
 th {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-gray);
   padding: 1rem 1.5rem;
   text-align: left;
 }
@@ -333,7 +339,7 @@ input::placeholder {
 }
 input,
 select {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-gray);
   padding: 1rem;
   border-radius: 0.5rem;
   width: 100%;
@@ -366,7 +372,7 @@ form button {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-gray);
   max-width: fit-content;
   margin: 0 auto;
   padding: 1.25rem;
@@ -431,7 +437,7 @@ footer {
 }
 .footer-flex-group {
   display: flex;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-gray);
   justify-content: space-around;
   padding-bottom: 5rem;
 }
@@ -458,6 +464,7 @@ footer ul {
   gap: 1.25rem;
 }
 .footer-flex-group + .paragraph {
+  font-size: 1.25rem;
   text-align: center;
   padding-top: 2.5rem;
 }
@@ -471,6 +478,12 @@ footer ul {
 @media screen and (max-width: 576px) {
   .btn {
     padding: 1rem 1.5rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .secondary-title {
+    font-size: 1rem;
   }
   header {
     padding: 0 0.5rem;
@@ -501,6 +514,10 @@ footer ul {
   .flex-container {
     flex-direction: column;
   }
+  .extra-mile {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   .extra-mile-container {
     flex-direction: column;
   }
@@ -508,13 +525,29 @@ footer ul {
     width: 100%;
     margin-bottom: 2rem;
   }
+  .running-img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: 0%;
+  }
+  .bmi-flex-group,
+  .bmi-text-container {
+    padding: 0 1.25rem;
+  }
   .bmi-flex-group {
     flex-direction: column;
     gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2.8rem;
+  }
+  .bmi .btn {
+    margin-top: 2rem;
   }
   .grid-container {
     grid-template-columns: 1fr;
   }
+
   .customers-img-section {
     grid-template-areas:
       "shoeib"
@@ -526,7 +559,7 @@ footer ul {
     max-height: auto;
   }
   .customers-text-container {
-    padding: 0.5rem;
+    padding: 0rem 1rem 0rem 3rem;
   }
   footer {
     padding-left: 1.25rem;
@@ -534,5 +567,6 @@ footer ul {
   .footer-flex-group {
     flex-direction: column;
     gap: 1.25rem;
+    margin-right: 1.25rem;
   }
 }
