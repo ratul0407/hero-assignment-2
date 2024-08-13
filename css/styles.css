@@ -10,6 +10,12 @@
 img {
   max-width: 100%;
 }
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
 /* custom fonts */
 @font-face {
   font-family: "Miama Regular";
@@ -80,15 +86,10 @@ img {
   color: rgba(255, 255, 255, 0.4);
 }
 body {
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(0, 0, 0);
 }
 /* header */
 header {
-  /* background: linear-gradient(
-    rgb(17, 17, 17),
-    rgb(119, 119, 119) 180%,
-    rgb(17, 17, 17)
-  ); */
   background: linear-gradient(to bottom, #000, #434343, #000);
 }
 
@@ -110,18 +111,15 @@ header {
   display: flex;
   gap: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem;
+  padding: 0.7rem 1rem 0.7rem 0.3rem;
   border-radius: 3rem;
 }
 
 .hamburger-icon-container {
   display: none;
 }
-.list-item {
-  list-style-type: none;
-}
+
 .list-item a {
-  text-decoration: none;
   color: white;
 }
 .primary-list {
@@ -157,6 +155,7 @@ header {
 .btn-container {
   display: flex;
   gap: 1rem;
+  padding-bottom: 4.75rem;
 }
 .img-container {
   position: relative;
@@ -383,8 +382,6 @@ form button {
 }
 
 /* customers section */
-.customers {
-}
 .customers-text-container {
   margin: 0 auto;
   max-width: 45rem;
@@ -407,10 +404,10 @@ form button {
   align-items: center;
   gap: 1rem;
 }
-.img-container {
+.customer-img-container {
   position: relative;
 }
-.img-container > img {
+.customer-img-container > img {
   border-radius: 1rem;
   max-width: 322px;
   max-height: 438px;
@@ -426,6 +423,44 @@ form button {
   max-width: 30ch;
   font-style: italic;
 }
+
+/* footer section */
+footer {
+  padding: 4.125rem 0;
+  margin-top: 8rem;
+}
+.footer-flex-group {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  justify-content: space-around;
+  padding-bottom: 5rem;
+}
+.footer-title {
+  font-size: 4.375rem;
+  color: var(--color-primary);
+  padding-bottom: 1.25rem;
+}
+.footer-title + .paragraph {
+  max-width: 45ch;
+}
+.footer-flex-group h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 1.25rem;
+}
+footer a {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.footer-flex-group + .paragraph {
+  text-align: center;
+  padding-top: 2.5rem;
+}
 /* solved overflow issue for the widget */
 @media screen and (max-width: 1600px) {
   .widget.position-1 {
@@ -435,10 +470,10 @@ form button {
 /* media queries for smaller screen sizes */
 @media screen and (max-width: 576px) {
   .btn {
-    padding: 1rem 1.8rem;
+    padding: 1rem 1.5rem;
   }
-  .navbar {
-    padding: 1rem;
+  header {
+    padding: 0 0.5rem;
   }
   .navbar-list {
     display: none;
@@ -459,6 +494,9 @@ form button {
   }
   .widget.position-1 {
     right: -10px;
+  }
+  .widget.position-2 {
+    left: -10px;
   }
   .flex-container {
     flex-direction: column;
@@ -483,11 +521,18 @@ form button {
       "avi"
       "sonar";
   }
-  .img-container > img {
+  .customer-img-container > img {
     min-width: 100%;
     max-height: auto;
   }
   .customers-text-container {
     padding: 0.5rem;
+  }
+  footer {
+    padding-left: 1.25rem;
+  }
+  .footer-flex-group {
+    flex-direction: column;
+    gap: 1.25rem;
   }
 }
