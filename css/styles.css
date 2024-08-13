@@ -62,7 +62,7 @@ a {
   font-variation-settings: "slnt" 0;
 }
 .max-width {
-  max-width: 1440px;
+  max-width: 66.25rem;
   margin: 0 auto;
 }
 
@@ -256,7 +256,7 @@ main {
 }
 .extra-mile-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .extra-mile-text-container {
@@ -296,7 +296,7 @@ main {
   margin-top: 5.5rem;
 
   padding: 3.2rem 0;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
 }
 .bmi-chart .secondary-title {
@@ -391,7 +391,6 @@ form button {
 .customers-text-container {
   margin: 0 auto;
   max-width: 45rem;
-  margin-bottom: 4rem;
 }
 
 .shoeib {
@@ -409,6 +408,7 @@ form button {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-top: 4rem;
 }
 .customer-img-container {
   position: relative;
